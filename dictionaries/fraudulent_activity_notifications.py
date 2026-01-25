@@ -8,7 +8,7 @@ def activityNotifications(expenditure: list[int], d: int):
     for exp in expenditure[:d]:
         count[exp] += 1
 
-    def find_median(count, d):
+    def find_median(count: list[int], d: int) -> int:
         total = 0
         if d % 2 == 0:
             first_median = second_median = None
