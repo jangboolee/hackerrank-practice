@@ -35,6 +35,16 @@ def makeAnagram(a: str, b: str) -> int:
     return total
 
 
+def makeAnagramAlt(a: str, b: str) -> int:
+    chars = {}
+    for _ in a:
+        chars[_] = chars.get(_, 0) + 1
+    for _ in b:
+        chars[_] = chars.get(_, 0) - 1
+
+    return sum(map(abs, chars.values()))
+
+
 def test(fn) -> None:
     case_0_a = "cde"
     case_0_b = "dcf"
@@ -43,3 +53,4 @@ def test(fn) -> None:
 
 if __name__ == "__main__":
     test(makeAnagram)
+    test(makeAnagramAlt)
