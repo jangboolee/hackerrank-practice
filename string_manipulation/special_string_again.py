@@ -28,7 +28,7 @@ def substrCount(n: int, s: str) -> int:
 def test(fn) -> None:
     case_0_n = 7
     case_0_s = "abcbaba"
-    # assert fn(case_0_n, case_0_s) == 10
+    assert fn(case_0_n, case_0_s) == 10
 
     case_1_n = 4
     case_1_s = "aaaba"
